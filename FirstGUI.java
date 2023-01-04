@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class FirstGUI {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
 
       String name = JOptionPane.showInputDialog("Enter your name:");
       JOptionPane.showMessageDialog(null, "Hello " +name);

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class MathClass {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
         /*
         double x = 3.14;
         double y = -20;

@@ -1,7 +1,7 @@
 public class LogicalOperators {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
 
-        int speed = //number;
+        int speed =150;
 
         if (speed>=200 && speed<300) {
             System.out.println("Slow down!");

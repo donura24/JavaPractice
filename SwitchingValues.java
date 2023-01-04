@@ -1,5 +1,5 @@
-public class FirstSteps {
-    public static void main(String[] args) {
+public class SwitchingValues {
+    public static void main(Strings[] args) {
         /*
         Switching the values of 'first' and 'second'
          */

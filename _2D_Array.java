@@ -1,5 +1,5 @@
 public class _2D_Array {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
        /*
         String[][] countries = new String[3][3];
 
@@ -20,10 +20,8 @@ public class _2D_Array {
             }
         */
 
-        String[][] countries = {{"Bulgaria", "France", "Germany"},
+        java.lang.String[][] countries = {{"Bulgaria", "France", "Germany"},
                                 {"Spain", "Finland", "Greece"},
                                 {"USA", "RSA", "Ghana"}};
-
-
     }
 }
