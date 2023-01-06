@@ -8,5 +8,8 @@ public class constructor {
 
         System.out.println(human1.name);
         System.out.println(human2.name);
+
+        human2.eat();
+        human1.party();
     }
 }
