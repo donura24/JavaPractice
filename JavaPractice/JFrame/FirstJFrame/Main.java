@@ -1,8 +1,6 @@
-package JavaPractice.JFrame;
+package JavaPractice.JavaPractice.JFrame.FirstJFrame;
 
-import javax.swing.*;
-import javax.swing.ImageIcon;
-import java.awt.*;
+import JavaPractice.JavaPractice.JFrame.FirstJFrame.MyFrame;
 
 public class Main {
     public static void main(String[] args) {

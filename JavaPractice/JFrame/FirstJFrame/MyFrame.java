@@ -1,4 +1,4 @@
-package JavaPractice.JFrame;
+package JavaPractice.JavaPractice.JFrame.FirstJFrame;
 
 import javax.swing.*;
 import java.awt.*;
