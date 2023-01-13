@@ -16,8 +16,9 @@ public class MyFrame extends JFrame implements ActionListener {
 
         label = new JLabel();
         label.setIcon(icon2);
-        label.setBounds(250, 150, 256, 256);
+        label.setBounds(275, 175, 256, 256);
         label.setVisible(false);
+        label.setBorder(BorderFactory.createLineBorder(Color.orange,3));
 
         button = new JButton();
         button.setBounds(150, 150, 550, 350);
