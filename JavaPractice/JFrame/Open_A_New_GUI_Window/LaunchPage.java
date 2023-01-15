@@ -8,14 +8,15 @@ public class LaunchPage implements ActionListener {
 
     JFrame frame = new JFrame();
     JButton button = new JButton("Opens a new window!");
-    LaunchPage(){
 
-        button.setBounds(100,110,220,120);
+    LaunchPage() {
+
+        button.setBounds(100, 110, 220, 120);
         button.setFocusable(false);
         button.addActionListener(this);
 
         frame.setVisible(true);
-        frame.setSize(400,400);
+        frame.setSize(400, 400);
         frame.setLayout(null);
         frame.add(button);
 
