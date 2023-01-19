@@ -23,10 +23,10 @@ public class MyFrame extends JFrame implements MouseListener {
         label.setOpaque(true);
         label.addMouseListener(this);
 
-        summer = new ImageIcon("/home/teodor.penchev/Downloads/PNGs/summer-beach-girl-finger-icon.png");
-        spring = new ImageIcon("/home/teodor.penchev/Downloads/PNGs/spring-icon.png");
-        autumn = new ImageIcon("/home/teodor.penchev/Downloads/PNGs/autumn-icon.png");
-        winter = new ImageIcon("/home/teodor.penchev/Downloads/PNGs/winter-skating-icon.png");
+        summer = new ImageIcon("/home/teodor.penchev/IdeaProjects/code/src/JavaPractice/PNGs/summer-beach-girl-finger-icon.png");
+        spring = new ImageIcon("/home/teodor.penchev/IdeaProjects/code/src/JavaPractice/PNGs/spring-icon.png");
+        autumn = new ImageIcon("/home/teodor.penchev/IdeaProjects/code/src/JavaPractice/PNGs/autumn-icon.png");
+        winter = new ImageIcon("/home/teodor.penchev/IdeaProjects/code/src/JavaPractice/PNGs/winter-skating-icon.png");
 
 
         this.add(label);
