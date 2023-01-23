@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Deserialization1/Deserialization1.iml" filepath="$PROJECT_DIR$/Deserialization1/Deserialization1.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaPractice.iml" filepath="$PROJECT_DIR$/JavaPractice.iml" />
     </modules>
   </component>
