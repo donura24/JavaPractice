@@ -6,7 +6,7 @@ import java.awt.*;
 public class MyFrame extends JFrame {
 
     MyPanel panel;
-    MyFrame(){
+    public MyFrame(){
 
         panel = new MyPanel();
         this.add(panel);
