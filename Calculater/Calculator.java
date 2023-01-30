@@ -10,7 +10,7 @@ public class Calculator implements ActionListener {
     JFrame frame;
     JTextField textField;
     JButton[] numberButtons = new JButton[10];
-    JButton[] functionButtons = new JButton[8];
+    JButton[] functionButtons = new JButton[9];
     JButton addButton, subButton, mulButton, divButton;
     JButton decButton, equButton, delButton, clrButton;
     JPanel panel;
@@ -52,6 +52,7 @@ public class Calculator implements ActionListener {
         functionButtons[6] = delButton;
         functionButtons[7] = clrButton;
 
+
         for (int i = 0; i < 8; i++) {
             functionButtons[i].addActionListener(this);
             functionButtons[i].setFont(myFont);
@@ -64,8 +65,8 @@ public class Calculator implements ActionListener {
             numberButtons[i].setFocusable(false);
         }
 
-        delButton.setBounds(50, 430, 145, 50);
-        clrButton.setBounds(205, 430, 145, 50);
+        delButton.setBounds(50, 430, 150, 50);
+        clrButton.setBounds(200, 430, 150, 50);
 
         panel = new JPanel();
         panel.setBounds(50, 100, 300, 300);
@@ -88,7 +89,6 @@ public class Calculator implements ActionListener {
         panel.add(numberButtons[0]);
         panel.add(equButton);
         panel.add(divButton);
-
 
         frame.add(panel);
         frame.add(delButton);
@@ -141,21 +141,24 @@ public class Calculator implements ActionListener {
             num2 = Double.parseDouble(textField.getText());
 
             switch (operator) {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    result = num1 / num2;
-                    break;
+                case '+' -> result = num1 + num2;
+                case '-' -> result = num1 - num2;
+                case '*' -> result = num1 * num2;
+                case '/' -> result = num1 / num2;
             }
             textField.setText(String.valueOf(result));
-            num1=result;
+            num1 = result;
+        }
+        if (e.getSource() == clrButton) {
+            textField.setText("");
+        }
+        if (e.getSource() == delButton) {
+            String string = textField.getText();
+            textField.setText("");
+            for (int i = 0; i < string.length() - 1; i++) {
+                textField.setText(textField.getText() + string.charAt(i));
+
+            }
         }
 
     }
