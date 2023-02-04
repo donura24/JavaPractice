@@ -1,9 +1,8 @@
 package JavaPractice.DataStructuresAndAlgorithms.Queue;
 
 import java.util.LinkedList;
-import java.util.Queue;
 
-public class Main {
+public class Queue {
     public static void main(String[] args) {
 
         // Queue = FIFO data structure. First-In, First-Out
@@ -13,7 +12,7 @@ public class Main {
         // to add = enqueue, offer();
         // to remove - dequeue, poll();
 
-        Queue<String> queue = new LinkedList<String>();
+        java.util.Queue<String> queue = new LinkedList<String>();
 
         //System.out.println(queue.isEmpty());
         //System.out.println(queue.size());
