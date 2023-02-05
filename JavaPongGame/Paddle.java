@@ -7,7 +7,7 @@ public class Paddle extends Rectangle {
 
     int id;
     int yVelocity;
-    int speed;
+    int speed = 10;
     Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int id){
         super(x,y,PADDLE_WIDTH,PADDLE_HEIGHT);
         this.id = id;
@@ -44,21 +44,17 @@ public class Paddle extends Rectangle {
             case 1:
                 if (e.getKeyCode()==KeyEvent.VK_W){
                     setYDirection(0);
-                    move();
                 }
                 if (e.getKeyCode()==KeyEvent.VK_S){
                     setYDirection(0);
-                    move();
                 }
                 break;
             case 2:
                 if (e.getKeyCode()==KeyEvent.VK_UP){
                     setYDirection(0);
-                    move();
                 }
                 if (e.getKeyCode()==KeyEvent.VK_DOWN){
                     setYDirection(0);
-                    move();
                 }
                 break;
 
@@ -77,6 +73,7 @@ public class Paddle extends Rectangle {
 
         if (id==1){
             g.setColor(Color.blue);
+            //g.fillRect(x,y,width, height);
         }
         else {
             g.setColor(Color.red);
