@@ -1,6 +1,5 @@
 package JavaPractice.Optionals;
 
-import java.awt.print.Pageable;
 
 public class Snake {
 
