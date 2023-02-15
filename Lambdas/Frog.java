@@ -7,8 +7,9 @@ public class Frog implements Printable{
 
     Frog(){}
 
-    @Override
-    public void print() {
-        System.out.println("Frooofg!");
+
+    public String print(String suffix) {
+        System.out.println("Frooogh");
+        return suffix;
     }
 }
