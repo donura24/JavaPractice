@@ -7,7 +7,7 @@ public class Main {
         //frog.print();
         //printThing(frog);
 
-        Printable lambdaPrintable = (s) -> "Froooogg" + s;
+        Printable lambdaPrintable = (s) -> "Froooogggg" + s;
         printThing(lambdaPrintable);
     }
 
