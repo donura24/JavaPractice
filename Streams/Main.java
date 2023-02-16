@@ -1,8 +1,6 @@
 package JavaPractice.Streams;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -50,11 +48,20 @@ public class Main {
         // Group
         Map<Gender, List<Person>> groupGender = people.stream()
                 .collect(Collectors.groupingBy(Person::getGender));
-        groupGender.forEach((gender, people1) -> {
+        /*groupGender.forEach((gender, people1) -> {
             System.out.println(gender);
             people1.forEach(System.out::println);
             System.out.println();
-        });
+        });*/
+
+        Optional<String> oldestLady = people.stream()
+                .filter(person -> person.getGender().equals(Gender.FEMALE))
+                .max(Comparator.comparing(Person::getAge))
+                .map(Person::getName);
+
+        oldestLady.ifPresent(System.out::println);
+
+
     }
 
 
