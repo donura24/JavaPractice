@@ -9,7 +9,6 @@ public class Frog implements Printable{
 
 
     public String print(String suffix) {
-        System.out.println("Frooogh");
-        return suffix;
+        return "Froooogh" + suffix;
     }
 }
