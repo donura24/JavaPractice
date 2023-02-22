@@ -12,6 +12,7 @@ public class Main {
         transcript.setAudio_url("https://github.com/donura24/JavaPractice/raw/main/240895.wav");
 
 
+
         HttpRequest postRequest = HttpRequest.newBuilder()
                 .uri(new URI("https://api.assemblyai.com/v2/transcript"))
                 .header("Authorization", "b244a137272e401289ac45959b940c78")
@@ -21,7 +22,8 @@ public class Main {
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpResponse<String> postResponse = httpClient.send(postRequest, HttpResponse.BodyHandlers.ofString());
 
-
         System.out.println(postResponse.body());
+
+        //HttpRequest getRequest = HttpRequest.newBuilder().build();
     }
 }
