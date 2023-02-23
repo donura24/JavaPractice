@@ -30,6 +30,20 @@ public class Main {
 
         System.out.println(postResponse.body());
 
+        transcript = gson.fromJson(postResponse.body(), Transcript.class);
+        System.out.println(transcript.getId());
+
+        HttpRequest getRequest = HttpRequest.newBuilder()
+                .uri(new URI("https://api.assemblyai.com/v2/transcript" + transcript.getId()))
+                .header("Authorization", "b244a137272e401289ac45959b940c78")
+                .GET()
+                .build();
+
+        HttpResponse<String> getResponse = httpClient.send(getRequest, HttpResponse.BodyHandlers.ofString());
+
+        transcript = gson.fromJson(getResponse.body(), Transcript.class);
+
+
 
     }
 }
