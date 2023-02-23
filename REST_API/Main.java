@@ -1,5 +1,7 @@
 package JavaPractice.REST_API;
 
+import com.google.gson.Gson;
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -12,11 +14,13 @@ public class Main {
         transcript.setAudio_url("https://github.com/donura24/JavaPractice/raw/main/240895.wav");
 
 
+        Gson gson = new Gson();
+        String jsonReq = gson.toJson(transcript);
 
         HttpRequest postRequest = HttpRequest.newBuilder()
                 .uri(new URI("https://api.assemblyai.com/v2/transcript"))
                 .header("Authorization", "b244a137272e401289ac45959b940c78")
-                .POST(HttpRequest.BodyPublishers.ofString("{\"audio_url\": \"https://github.com/donura24/JavaPractice/raw/main/240895.wav\"}"))
+                .POST(HttpRequest.BodyPublishers.ofString(jsonReq))
                 .build();
 
         HttpClient httpClient = HttpClient.newHttpClient();
