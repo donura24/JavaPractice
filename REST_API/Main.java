@@ -28,6 +28,28 @@ public class Main {
 
         System.out.println(postResponse.body());
 
+        transcript = gson.fromJson(postResponse.body(), Transcript.class);
+        System.out.println(transcript.getId());
+
+        HttpRequest getRequest = HttpRequest.newBuilder()
+                .uri(new URI("https://api.assemblyai.com/v2/transcript" + transcript.getId()))
+                .header("Authorization", "b244a137272e401289ac45959b940c78")
+                .GET()
+                .build();
+
+        while (true) {
+            HttpResponse<String> getResponse = httpClient.send(getRequest, HttpResponse.BodyHandlers.ofString());
+            transcript = gson.fromJson(getResponse.body(), Transcript.class);
+            System.out.println(transcript.getStatus());
+            if ("completed".equals(transcript.getStatus()) || "error".equals(transcript.getStatus())) {
+                break;
+            }
+            Thread.sleep(1000);
+        }
+        System.out.println("Transcription completed!");
+        System.out.println(transcript.getText());
+
+
         //HttpRequest getRequest = HttpRequest.newBuilder().build();
     }
 }
