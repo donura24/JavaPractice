@@ -13,7 +13,6 @@ public class Main {
         Transcript transcript = new Transcript();
         transcript.setAudio_url("https://github.com/donura24/JavaPractice/raw/main/240895.wav");
 
-
         Gson gson = new Gson();
         String jsonReq = gson.toJson(transcript);
 
@@ -32,7 +31,7 @@ public class Main {
         System.out.println(transcript.getId());
 
         HttpRequest getRequest = HttpRequest.newBuilder()
-                .uri(new URI("https://api.assemblyai.com/v2/transcript" + transcript.getId()))
+                .uri(new URI("https://api.assemblyai.com/v2/transcript/" + transcript.getId()))
                 .header("Authorization", "b244a137272e401289ac45959b940c78")
                 .build();
 
