@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         Transcript transcript = new Transcript();
-        transcript.setAudio_url("https://github.com/donura24/JavaPractice/raw/main/240895.wav");
+        transcript.setAudio_url("https://github.com/donura24/JavaPractice/raw/main/Guns%20N'%20Roses%20-%20Don't%20Cry.mp3");
 
         Gson gson = new Gson();
         String jsonReq = gson.toJson(transcript);
