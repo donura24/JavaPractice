@@ -2,6 +2,7 @@ package JavaPractice.Annotations;
 @VeryImportant
 public class Frog {
 
+@ImportantString
     String name;
     int age;
 
