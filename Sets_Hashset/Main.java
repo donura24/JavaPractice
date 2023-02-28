@@ -37,5 +37,8 @@ public class Main {
         Set<Integer> numSet = new HashSet<>();
         numSet.addAll(numberList);
         System.out.println(numSet);
+
+        //Set<String> name = new TreeSet<>();
+        //Set<String> name = new LinkedHashSet<>();
     }
 }
