@@ -18,9 +18,9 @@ public class Main {
         }
         Method [] snakeMethods = snake1.getClass().getDeclaredMethods();
         for (Method method : snakeMethods){
-            if (method.getName().equals("thisIsPrivate")){
+            if (method.getName().equals("privateStaticMethod")){
                 method.setAccessible(true);
-                method.invoke(snake1);
+                method.invoke(null);
             }
             System.out.println(method.getName());
         }
