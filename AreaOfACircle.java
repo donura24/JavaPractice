@@ -11,6 +11,7 @@ public class AreaOfACircle {
         double radius = scanner.nextDouble();
 
         System.out.println("Area of the circle is " + Math.PI * Math.pow(radius, 2));
+        scanner.close();
 
     }
 }
