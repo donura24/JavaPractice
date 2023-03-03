@@ -2,6 +2,7 @@ package JavaPractice.FunctionalProgramming.Imperative;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static JavaPractice.FunctionalProgramming.Imperative.Main.Gender.FEMALE;
@@ -25,10 +26,13 @@ public class Main {
         }
 
         System.out.println("Declarative approach"); //Declarative approach
-        people.stream()
+
+        Predicate<Person> personPredicate = person -> FEMALE.equals(person.gender);
+
+        List<Person> females2 = people.stream()
                 .filter(person -> FEMALE.equals(person.gender))
-                .collect(Collectors.toList())
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
+        females2.forEach(System.out::println);
 
     }
 
