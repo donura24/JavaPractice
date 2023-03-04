@@ -1,20 +1,25 @@
 package JavaPractice.FunctionalProgramming.FunctionalInterface;
 
-import com.google.gson.internal.bind.util.ISO8601Utils;
-
 import java.util.function.Function;
 
 public class _Function {
     public static void main(String[] args) {
         int increment = increment(2);
-        System.out.println(increment);
+        //System.out.println(increment);
 
-        Function<Integer, Integer> incrementByOne = number -> number+=1;
+        int increment2 = incrementByOneFunction.apply(2);
+        //System.out.println(increment2);
 
-        int increment2 = incrementByOne.apply(2);
-        System.out.println(increment2);
+        int multiplyBy10 = multiplyBy10Function.apply(increment2);
+        //System.out.println(multiplyBy10Function);
+
+        Function<Integer, Integer> addByOnePlusMultiplyBy10Func = incrementByOneFunction.andThen(multiplyBy10Function);
+        System.out.println(addByOnePlusMultiplyBy10Func.apply(2));
 
     }
+    static Function<Integer, Integer> incrementByOneFunction = number -> number+=1;
+
+    static Function<Integer, Integer> multiplyBy10Function = number -> number * 10;
 
 
 
