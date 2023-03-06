@@ -1,6 +1,7 @@
 package JavaPractice.FunctionalProgramming.FunctionalInterface;
 
 import java.lang.ref.SoftReference;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class _Supplier {
@@ -9,8 +10,11 @@ public class _Supplier {
         System.out.println(getDBConnectionURLSupplier.get());
     }
 
-    static String getDBConnectionURL(){
+    static String getDBConnectionURL() {
         return "jdbc://localhost:5432/users";
     }
-    static Supplier<String> getDBConnectionURLSupplier = () -> "jdbc://localhost:5432/users";
+
+    static Supplier<List<String>> getDBConnectionURLSupplier = ()
+            -> List.of("jdbc://localhost:5432/users" +
+            "jdbc://localhost:5432/admins");
 }
