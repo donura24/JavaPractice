@@ -1,6 +1,7 @@
 package JavaPractice.FunctionalProgramming._Streams;
 
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static JavaPractice.FunctionalProgramming._Streams._Stream.Gender.FEMALE;
@@ -16,10 +17,17 @@ public class _Stream {
                 new Person("Ivana", FEMALE)
         );
 
-        people.stream()
-                .map(person -> person.name)
-                .collect(Collectors.toSet())
-                .forEach(System.out::println);
+//        people.stream()
+//                .map(person -> person.name)
+//                .mapToInt(name -> name.length())
+//                .forEach(System.out::println);
+
+        Predicate<Person> personPredicate = person -> FEMALE.equals(person.gender);
+
+        boolean containsOnlyFemales = people.stream()
+                .allMatch(person -> FEMALE.equals(person.gender));
+        System.out.println(containsOnlyFemales );
+
     }
 
     static class Person {
