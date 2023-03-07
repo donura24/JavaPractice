@@ -13,6 +13,6 @@ public class Main {
         Optional.ofNullable(null)
                 //.ifPresent(name -> System.out.println("Your name is: " + name));
                 .ifPresentOrElse(name -> System.out.println("Your name is: " + name),
-                        () -> System.out.println("Please enter a name.") );
+                        () -> System.out.println("Please enter a name."));
     }
 }
