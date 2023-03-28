@@ -2,9 +2,9 @@ package JavaPractice.Encapsulation;
 
 public class Employee {
 
-    String name;
-    int age;
-    int workExp;
+    private String name;
+    private int age;
+    private int workExp;
 
     public String getName() {
         return name;
