@@ -57,4 +57,26 @@ public class Main {
                 !isNumberInRow(board, number, row) &&
                 !isNumberInColumn(board, number, column);
     }
+
+    private static boolean solveboard(int[][] board) {
+        for (int row = 0; row < GRID_SIZE; row++) {
+            for (int column = 0; column < GRID_SIZE; column++) {
+                if (board[row][column] == 0) {
+                    for (int numToTry = 0; numToTry <= GRID_SIZE; numToTry++) {
+                        if (isValidPlacement(board, numToTry, row, column)) {
+                            board[row][column] = numToTry;
+                            if (solveboard(board)) {
+                                return true;
+                            } else {
+                                board[row][column] = 0;
+                            }
+                        }
+                    }
+                    return false;
+                }
+
+            }
+        }
+        return true;
+    }
 }
