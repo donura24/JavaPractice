@@ -8,5 +8,6 @@ public class examplee {
 
         long timestamp = System.currentTimeMillis()/ 1000;
         System.out.println(timestamp);
+        System.out.println(timestamp);
     }
 }
