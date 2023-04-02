@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: JavaPractice.JavaPractice.JFrame._2D_Graphics.Main
+
