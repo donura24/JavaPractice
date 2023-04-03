@@ -34,5 +34,20 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
  */
 public class Solution {
+    public int lengthOfLongestSubstring(String s){
+        int maxLength = 0;
 
+        for (int i = 0; i < s.length(); i++) {
+
+            StringBuilder currSubstring = new StringBuilder();
+            for (int j = i; j < s.length(); j++) {
+                if (currSubstring.indexOf(String.valueOf(s.charAt(j))) != -1){
+                    break;
+                }
+                currSubstring.append(s.charAt(j));
+                maxLength = Math.max(maxLength, currSubstring.length());
+            }
+        }
+        return maxLength;
+    }
 }
