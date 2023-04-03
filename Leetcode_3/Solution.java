@@ -1,6 +1,11 @@
 package JavaPractice.Leetcode_3;
 
 
+import com.google.gson.internal.bind.MapTypeAdapterFactory;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /*
 3. Longest Substring Without Repeating Characters
 
@@ -34,19 +39,19 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
  */
 public class Solution {
-    public int lengthOfLongestSubstring(String s){
+    public int lengthOfLongestSubstring(String s) {
         int maxLength = 0;
+        Map<Character, Integer> chars = new HashMap<>();
 
-        for (int i = 0; i < s.length(); i++) {
 
-            StringBuilder currSubstring = new StringBuilder();
-            for (int j = i; j < s.length(); j++) {
-                if (currSubstring.indexOf(String.valueOf(s.charAt(j))) != -1){
-                    break;
-                }
-                currSubstring.append(s.charAt(j));
-                maxLength = Math.max(maxLength, currSubstring.length());
+        int left = 0;
+        for (int right = 0; right < s.length(); right++) {
+            char currChar = s.charAt(right);
+            if (chars.containsKey(currChar) && chars.get(currChar) >= left) {
+                left = chars.get(currChar) + 1;
             }
+            maxLength = Math.max(maxLength, right - left + 1);
+            chars.put(currChar, right);
         }
         return maxLength;
     }
