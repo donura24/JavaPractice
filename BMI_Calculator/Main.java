@@ -1,5 +1,6 @@
 package JavaPractice.BMI_Calculator;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
 
         double bmi = weight / Math.pow(height, 2) * 703;
 
-        System.out.printf("Your BMI is:"+ bmi);
+        DecimalFormat df = new DecimalFormat("0.00");
+        System.out.printf("Your BMI is:"+ df.format(bmi));
     }
 }
